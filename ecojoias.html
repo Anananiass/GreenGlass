@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Green Glass Solutions — Vidro reaproveitado, nascida na UFMG</title>
-  <meta name="description" content="A Green Glass Solutions, nascida na UFMG, transforma resíduos de vidro em produtos de design.">
+  <title>Ecojoias — Green Glass Solutions</title>
+  <meta name="description" content="Ecojoias feitas à mão com vidro reaproveitado: brincos, colares, anéis e pulseiras.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manjari:wght@400;700&display=swap" rel="stylesheet">
@@ -12,7 +12,7 @@
 </head>
 <body>
 
-  <div class="aviso">Nossas ecojoias já estão à venda · <a href="ecojoias.html">Ver a loja</a></div>
+  <div class="aviso">Ecojoias de vidro reaproveitado · Pedidos pelo WhatsApp</div>
 
   <header class="site-header">
     <div class="container">
@@ -20,91 +20,106 @@
         <img src="img/logo.png?v=2" alt="Green Glass">
       </a>
       <nav class="nav" aria-label="Principal">
-        <a href="index.html" class="ativo" aria-current="page">A Empresa</a>
-        <a href="ecojoias.html">Ecojoias</a>
+        <a href="index.html">A Empresa</a>
+        <a href="ecojoias.html" class="ativo" aria-current="page">Ecojoias</a>
       </nav>
-      <a class="btn-sacola" href="ecojoias.html#sacola">
+      <button class="btn-sacola" type="button" data-abrir-sacola aria-controls="sacola">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
-        Sacola <span class="contador" data-contador hidden>0</span>
-      </a>
+        Sacola <span class="contador" data-contador hidden aria-live="polite">0</span>
+      </button>
     </div>
   </header>
 
   <main>
 
     <!-- Hero -->
-    <section class="hero">
+    <section class="hero-loja">
       <div class="container">
-        <span class="selo">Nascida na UFMG</span>
-        <h1>Damos ao vidro uma <em>segunda vida</em></h1>
-        <p>Transformamos resíduos de vidro em produtos de design.</p>
-        <div class="hero-acoes">
-          <a class="btn btn-claro" href="ecojoias.html">Ver a loja</a>
-          <a class="btn btn-contorno" href="#processo">Como fazemos</a>
+        <div>
+          <span class="rotulo">Ecojoias Green Glass</span>
+          <h1>Joias feitas de vidro reaproveitado</h1>
+          <p>Brincos, colares, anéis e pulseiras feitos à mão.</p>
+          <a class="btn btn-primario" href="#loja">
+            Comprar agora
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <div class="foto">
+          <img src="img/hero-catalogo.jpg" alt="Ecojoias Green Glass sobre pedra e cacos de vidro">
         </div>
       </div>
     </section>
 
-    <!-- Garrafas -->
+    <!-- Missão -->
+    <section class="missao">
+      <div class="container">
+        <h2>Nossa missão</h2>
+        <p>Dar nova vida ao vidro descartado, em joias autorais feitas à mão.</p>
+      </div>
+    </section>
+
+    <!-- Categorias -->
     <section class="secao">
       <div class="container">
-        <article class="card-garrafas">
-          <div class="card-garrafas-texto">
-            <span class="rotulo">Ciência que transforma</span>
-            <h2>Garrafas de vidro não são lixo</h2>
-            <p>Na Green Glass, usamos ciência para transformar o que iria para o lixo em algo de valor.</p>
+        <h2 class="titulo-secao">Explore por categoria</h2>
+        <div class="categorias">
+          <button class="categoria" type="button" data-filtro="Brincos">
+            <img src="img/cat-brincos.jpg" alt="" loading="lazy"><span>Brincos</span>
+          </button>
+          <button class="categoria" type="button" data-filtro="Colares">
+            <img src="img/cat-colares.jpg" alt="" loading="lazy"><span>Colares</span>
+          </button>
+          <button class="categoria" type="button" data-filtro="Anéis">
+            <img src="img/cat-aneis.jpg" alt="" loading="lazy"><span>Anéis</span>
+          </button>
+          <button class="categoria" type="button" data-filtro="Pulseiras">
+            <img src="img/cat-pulseiras.jpg" alt="" loading="lazy"><span>Pulseiras</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Produtos à venda -->
+    <section class="secao secao-branca" id="loja">
+      <div class="container">
+        <div class="loja-topo">
+          <h2 class="titulo-secao">À venda</h2>
+          <div class="filtros" role="group" aria-label="Filtrar por categoria">
+            <button class="filtro" type="button" data-filtro="Todos" aria-pressed="true">Todos</button>
+            <button class="filtro" type="button" data-filtro="Brincos" aria-pressed="false">Brincos</button>
+            <button class="filtro" type="button" data-filtro="Colares" aria-pressed="false">Colares</button>
+            <button class="filtro" type="button" data-filtro="Anéis" aria-pressed="false">Anéis</button>
+            <button class="filtro" type="button" data-filtro="Pulseiras" aria-pressed="false">Pulseiras</button>
           </div>
-          <img src="img/garrafas.svg" alt="Coleção de garrafas de vidro reaproveitado, retroiluminadas em uma prateleira">
-        </article>
-      </div>
-    </section>
-
-    <!-- Processo -->
-    <section class="secao secao-branca" id="processo">
-      <div class="container">
-        <div class="cabecalho-centro">
-          <span class="rotulo">Como fazemos</span>
-          <h2>Do descarte ao design</h2>
         </div>
-        <ol class="processo">
-          <li class="passo"><span class="num">01</span><h3>Coleta</h3><p>Reunimos vidro que seria descartado.</p></li>
-          <li class="passo"><span class="num">02</span><h3>Triagem</h3><p>Limpamos e separamos por cor.</p></li>
-          <li class="passo"><span class="num">03</span><h3>Transformação</h3><p>Aquecemos e moldamos cada peça.</p></li>
-          <li class="passo"><span class="num">04</span><h3>Acabamento</h3><p>Finalizamos tudo à mão.</p></li>
-        </ol>
+        <ul class="grade-produtos" id="grade-produtos"></ul>
       </div>
     </section>
 
-    <!-- Pilares -->
-    <section class="secao">
-      <div class="container">
-        <ul class="pilares">
-          <li class="pilar">
-            <div class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
-            <div><strong>Nascida na UFMG</strong><span>Pesquisa aplicada ao vidro</span></div>
-          </li>
-          <li class="pilar">
-            <div class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg></div>
-            <div><strong>Economia circular</strong><span>Menos vidro no lixo</span></div>
-          </li>
-          <li class="pilar">
-            <div class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.8L20 10l-6.1 1.2L12 17l-1.9-5.8L4 10l6.1-1.2z"/><path d="M19 17l.8 2.2L22 20l-2.2.8L19 23l-.8-2.2L16 20l2.2-.8z"/></svg></div>
-            <div><strong>Design autoral</strong><span>Feito à mão</span></div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Chamada para a loja -->
-    <section class="faixa-cta">
-      <div class="container">
-        <span class="rotulo">Ecojoias</span>
-        <h2>Nossas joias já estão à venda</h2>
-        <a class="btn btn-claro" href="ecojoias.html">
-          Ver a loja
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-      </div>
+    <!-- Garantias -->
+    <section class="container">
+      <ul class="garantias">
+        <li class="garantia">
+          <div class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 11V6a2 2 0 0 0-4 0v5"/><path d="M14 10V4a2 2 0 0 0-4 0v6"/><path d="M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.9-6-2.3l-3.6-3.6a2 2 0 0 1 2.8-2.8L7 15"/></svg></div>
+          <strong>Feito à mão</strong>
+          <span>Produção artesanal</span>
+        </li>
+        <li class="garantia">
+          <div class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z"/><path d="M2 21c0-3 1.9-5.4 5.1-6C9.5 14.5 12 13 13 12"/></svg></div>
+          <strong>Vidro reaproveitado</strong>
+          <span>Menos vidro no lixo</span>
+        </li>
+        <li class="garantia">
+          <div class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <strong>Pedido pelo WhatsApp</strong>
+          <span>Atendimento direto</span>
+        </li>
+        <li class="garantia">
+          <div class="icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+          <strong>Nascida na UFMG</strong>
+          <span>Pesquisa e design</span>
+        </li>
+      </ul>
     </section>
 
   </main>
@@ -129,6 +144,27 @@
     </div>
   </footer>
 
+  <!-- Sacola -->
+  <div class="sacola-fundo" data-fechar-sacola></div>
+  <aside class="sacola" id="sacola" aria-label="Sacola de compras" inert>
+    <div class="sacola-topo">
+      <h2>Sua sacola</h2>
+      <button class="fechar" type="button" data-fechar-sacola aria-label="Fechar sacola">×</button>
+    </div>
+    <p class="sacola-vazia" id="sacola-vazia">Sua sacola está vazia.</p>
+    <ul class="sacola-itens" id="sacola-itens"></ul>
+    <div class="sacola-rodape" id="sacola-rodape" hidden>
+      <div class="total"><span>Total</span><strong id="sacola-total">R$ 0,00</strong></div>
+      <p class="nota">Frete e pagamento são combinados pelo WhatsApp.</p>
+      <p class="nota" id="aviso-config" hidden>Pedidos online em breve.</p>
+      <button class="btn btn-primario btn-finalizar" id="btn-finalizar" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Finalizar pelo WhatsApp
+      </button>
+    </div>
+  </aside>
+
   <script src="js/comum.js?v=3"></script>
+  <script src="js/loja.js?v=3"></script>
 </body>
 </html>
